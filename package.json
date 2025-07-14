@@ -1,0 +1,26 @@
+{
+  "name": "not-roko-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yawenx2004/not-roko-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/yawenx2004/not-roko-backend/issues"
+  },
+  "homepage": "https://github.com/yawenx2004/not-roko-backend#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.3"
+  }
+}
