@@ -6,7 +6,22 @@ export const getPosts = async (req, res) => {
         const posts = await PostModel.find();
         res.json(posts);
     } catch (error) {
-        console.error('getPosts error:', error);
         res.status(500).json({ message: 'Error getting posts'});
     }
+}
+
+// delete post
+export const deletePost = async (req, res) => {
+ try {
+    const { id } = req.params;
+    const deletedPost = await PostModel.findByIdAndDelete(id);
+
+    if (!deletedPost) {
+        return res.status(404).json({ message: 'Post not found' });
+    }
+
+    res.json(deletedPost);
+ } catch (error) {
+        res.status(500).json({ message: 'Error deleting post'});
+ }
 }
