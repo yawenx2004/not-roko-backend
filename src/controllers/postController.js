@@ -10,6 +10,17 @@ export const getPosts = async (req, res) => {
     }
 }
 
+// create post
+export const createPost = async (req, res) => {
+    try {
+        const newPost = new PostModel(req.body);
+        await newPost.save();
+        res.json(newPost);
+    } catch (error) {
+        res.status(400).json({ message: 'Error creating post'});
+    }
+}
+
 // delete post
 export const deletePost = async (req, res) => {
  try {
